@@ -6,9 +6,35 @@
         xmlns:local="clr-namespace:AdoNet1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Name"></TextBlock>
-        </StackPanel> 
+    <Grid Background="#9E9E9E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Nametxtblock"  Text="Name" Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Pagetxtblock"  Text="Page" Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="YearPresstxtblock"  Text="Year Press" Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Commenttxtblock"  Text="Comment" Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Quantitytxtblock"  Text="Quantity" Width="150" Height="40" FontSize="25"></TextBox>
+        </StackPanel>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button Background="#B783F2" x:Name="insertBtn" Margin="100,10,0,60" Width="150" Height="40" FontSize="25">INSERT</Button>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="idTxtBlock" Margin="44,0,0,0" Text="Id" Width="60" Height="40" FontSize="25"></TextBox>
+                    <Button Background="#79415B" x:Name="deleteBtn" Width="150" Height="40" FontSize="25" Margin="70,0,0,0">DELETE</Button>
+                </StackPanel>
+                <Button Background="#502B3C" x:Name="showAllBtn" Margin="80" Width="150" Height="60" FontSize="25">SHOW ALL</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <ListBox x:Name="ListBox" Background="#D8CFD3" Width="370" Height="340">                    
+                </ListBox>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

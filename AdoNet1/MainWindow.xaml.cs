@@ -33,5 +33,12 @@ namespace AdoNet1
                 conn.Open();
             }
         }
+
+        private void Nametxtblock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBox txtbox = sender as TextBox;
+
+            txtbox.Text = "";
+        }
     }
 }
