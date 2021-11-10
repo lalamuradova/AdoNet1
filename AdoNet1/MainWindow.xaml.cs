@@ -131,12 +131,12 @@ namespace AdoNet1
                 conn.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnString"].ConnectionString;
                 conn.Open();
 
-                string query = @"delete from Books where Books.Id= @Id";
+                string query = @"delete from Books where Books.Id= @lala";
                               
 
                 var id = Int32.Parse(idTxtBlock.Text);
                 SqlParameter param = new SqlParameter();
-                param.ParameterName = "@Id";
+                param.ParameterName = "@lala";
                 param.SqlDbType = SqlDbType.Int;
                 param.Value = id;
 
@@ -157,7 +157,7 @@ namespace AdoNet1
                 }
             }
         }
-
+        //kukuli 
         private void showAllBtn_Click(object sender, RoutedEventArgs e)
         {
             ListBox.Items.Clear();
