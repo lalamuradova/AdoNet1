@@ -9,30 +9,38 @@
     <Grid Background="#9E9E9E">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Nametxtblock"  Text="Name" Width="150" Height="40" FontSize="25"></TextBox>
-            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Pagetxtblock"  Text="Page" Width="150" Height="40" FontSize="25"></TextBox>
-            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="YearPresstxtblock"  Text="Year Press" Width="150" Height="40" FontSize="25"></TextBox>
-            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Commenttxtblock"  Text="Comment" Width="150" Height="40" FontSize="25"></TextBox>
-            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Quantitytxtblock"  Text="Quantity" Width="150" Height="40" FontSize="25"></TextBox>
+            <Label Width="150" Height="40" FontSize="25">Name</Label>
+            <Label Width="150" Height="40" FontSize="25">Page</Label>
+            <Label Width="150" Height="40" FontSize="25">Year Press</Label>
+            <Label Width="150" Height="40" FontSize="25">Comment</Label>
+            <Label Width="150" Height="40" FontSize="25">Quantity</Label>
         </StackPanel>
-        <Grid Grid.Row="1" >
+        <StackPanel Grid.Row="1" Orientation="Horizontal" >
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Nametxtblock"  Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Pagetxtblock"  Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="YearPresstxtblock"  Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Commenttxtblock"  Width="150" Height="40" FontSize="25"></TextBox>
+            <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="Quantitytxtblock"  Width="150" Height="40" FontSize="25"></TextBox>
+        </StackPanel>
+        <Grid Grid.Row="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <Button Background="#B783F2" x:Name="insertBtn" Margin="100,10,0,60" Width="150" Height="40" FontSize="25">INSERT</Button>
+                <Button Background="#B783F2" x:Name="insertBtn" Margin="100,10,0,60" Width="150" Height="40" FontSize="25" Click="insertBtn_Click">INSERT</Button>
                 <StackPanel Orientation="Horizontal">
                     <TextBox Background="#D8CFD3" MouseDown="Nametxtblock_MouseDown" x:Name="idTxtBlock" Margin="44,0,0,0" Text="Id" Width="60" Height="40" FontSize="25"></TextBox>
-                    <Button Background="#79415B" x:Name="deleteBtn" Width="150" Height="40" FontSize="25" Margin="70,0,0,0">DELETE</Button>
+                    <Button Background="#79415B" x:Name="deleteBtn" Width="150" Height="40" FontSize="25" Margin="70,0,0,0" Click="deleteBtn_Click">DELETE</Button>
                 </StackPanel>
-                <Button Background="#502B3C" x:Name="showAllBtn" Margin="80" Width="150" Height="60" FontSize="25">SHOW ALL</Button>
+                <Button Background="#502B3C" x:Name="showAllBtn" Margin="60" Width="150" Height="60" FontSize="25" Click="showAllBtn_Click">SHOW ALL</Button>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <ListBox x:Name="ListBox" Background="#D8CFD3" Width="370" Height="340">                    
+                <ListBox x:Name="ListBox" Background="#D8CFD3" Width="370" Height="270">                    
                 </ListBox>
             </StackPanel>
         </Grid>
